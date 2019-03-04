@@ -1,21 +1,14 @@
+#!/usr/bin/env python
 import os
+import time
 
-myfolder = os.getcwd()
+os.chdir(os.getenv("HOME"))
+os.mkdir("os_lab_0")
+os.chdir("os_lab_0")
+os.system("touch a.txt b.txt c.py")
+#print time.ctime(max(os.path.getmtime(root) for root,_,_ in os.walk('../os_lab_0')))
+print (os.system("ls -l"))
+for file in os.listdir("../os_lab_0"):
 
-print(os.system("clear"))
-print(myfolder)
-
-print(os.listdir())
-
-print("second index", os.listdir()[1])
-
-#print("_______________________________")
-#print("ls -la ", os.system('ls -la'))
-
-print("is it directory? ",os.path.isdir(myfolder))
-
-mypath = os.path.join(myfolder , "another")
-
-print(mypath)
-
-print("is it dir ?", os.path.isdir(mypath))
+    if file.endswith(".txt"):
+            print(os.path.join(file))
