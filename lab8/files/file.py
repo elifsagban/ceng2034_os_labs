@@ -1,9 +1,14 @@
-import shutil, magic
+import shutil, magic, os
 
 JPEG = "JPEG"
 PNG = "PNG"
 ASCIITXT = "ASCII"
 MP3 = "Audio"
+
+os.mkdir('jpegFolder')
+os.mkdir('pngFolder')
+os.mkdir('txtFolder')
+os.mkdir('mp3Folder')
 
 for i in range (10,150):
 
